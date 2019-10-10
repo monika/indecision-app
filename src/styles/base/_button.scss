@@ -1,0 +1,89 @@
+.button {
+  display: inline-block;
+  background: $yellow;
+  color: $black;
+  border-top: 0.4rem solid transparent;
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid darken($yellow, 5%);
+  border-bottom: 0.4rem solid darken($yellow, 10%);
+  padding: $gutter * 0.75 $gutter;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: $base-font * 0.75;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.2rem;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: background-color cubic-bezier(0.39, 0.575, 0.565, 1) 0.1s,
+    border-color cubic-bezier(0.39, 0.575, 0.565, 1) 0.1s;
+
+  &:hover {
+    background: $green;
+    border-right-color: darken($green, 5%);
+    border-bottom-color: darken($green, 10%);
+  }
+
+  &:disabled {
+    background: $light-grey;
+    border-right-color: darken($light-grey, 5%);
+    border-bottom-color: darken($light-grey, 10%);
+    opacity: 0.5;
+    cursor: default;
+
+    &:hover {
+      background: $light-grey;
+      border-right-color: darken($light-grey, 5%);
+      border-bottom-color: darken($light-grey, 10%);
+    }
+  }
+
+  &:active {
+    border-color: transparent;
+    border-left: 0.4rem solid darken($green, 5%);
+    border-top: 0.4rem solid darken($green, 10%);
+  }
+
+  &:focus {
+    outline: 0.2rem dotted $purple;
+    outline-offset: 0.4rem;
+  }
+
+  &--big {
+    display: block;
+    width: 100%;
+    margin-bottom: $gutter * 2;
+    line-height: 1.5;
+    font-size: 2.4rem;
+    background-color: $blue;
+    border-right: 0.4rem solid darken($blue, 10%);
+    border-bottom: 0.4rem solid darken($blue, 15%);
+  }
+
+  &--special {
+    background-color: $blue;
+    border-right: 0.4rem solid darken($blue, 10%);
+    border-bottom: 0.4rem solid darken($blue, 15%);
+
+    &:hover {
+      background: $green;
+      border-right-color: darken($green, 5%);
+      border-bottom-color: darken($green, 10%);
+    }
+
+    &:active {
+      border-color: transparent;
+      border-left: 0.4rem solid darken($green, 5%);
+      border-top: 0.4rem solid darken($green, 10%);
+    }
+  }
+
+  &--small {
+    font-size: 1.2rem;
+    padding: $gutter/2;
+  }
+}

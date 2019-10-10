@@ -1,0 +1,49 @@
+.add-option {
+  background: $black;
+  color: $white;
+
+  padding: $gutter;
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media (max-width: $desktop-breakpoint) {
+      flex-direction: column;
+    }
+  }
+
+  .error {
+    background: red;
+    color: white;
+    margin: 0 0 $gutter;
+    padding: $gutter/2;
+  }
+  &__label {
+    align-self: center;
+    padding-right: $gutter;
+
+    @media (max-width: $desktop-breakpoint) {
+      margin-bottom: $gutter;
+    }
+  }
+
+  &__input {
+    flex-grow: 2;
+    border: 0.2rem solid $blue;
+    padding: $gutter/2;
+    &:focus {
+      outline: 0.2rem dotted $yellow;
+      outline-offset: 0.4rem;
+    }
+
+    @media (max-width: $desktop-breakpoint) {
+      margin-bottom: $gutter/2;
+    }
+  }
+
+  .button:focus {
+    outline-color: $yellow;
+  }
+}

@@ -1,0 +1,14 @@
+.header {
+  background: $dark-grey;
+  color: $white;
+  padding-top: $gutter * 2;
+  margin-bottom: $gutter * 2;
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__subtitle {
+    margin-bottom: 0;
+  }
+}
